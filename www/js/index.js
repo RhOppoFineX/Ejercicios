@@ -28,6 +28,15 @@ var app = {
         document.getElementById("btnconvertir6").addEventListener('click', calculadora, false);
         document.getElementById("btnconvertir7").addEventListener('click', boletos, false);
         document.getElementById("btnconvertir8").addEventListener('click', incrementoSalario, false);
+        document.getElementById("btnconvertir9").addEventListener('click', triangulos, false);
+        document.getElementById("btnconvertir10").addEventListener('click', llantas, false);
+        document.getElementById("btnconvertir11").addEventListener('click', oficinas, false);
+        document.getElementById("btnconvertir12").addEventListener('click', paresImpares, false);
+        document.getElementById("btnconvertir13").addEventListener('click', promedio, false);
+        document.getElementById("btnconvertir14").addEventListener('click', mayorMenor, false);
+        document.getElementById("btnconvertir15").addEventListener('click', examenes, false);
+
+
     },
 
     // deviceready Event Handler
@@ -281,6 +290,162 @@ function incrementoSalario()
     alert(`El nuevo salario del empleado es: ${salario.toFixed(2)}`);
 
 }
+
+//Ejercicio 9 
+function triangulos()
+{
+    var lado1 = parseFloat(prompt("Ingrese el Primer lado del triangulo"));
+    var lado2 = parseFloat(prompt("Ingrese el Segundo lado del triangulo"));
+    var lado3 = parseFloat(prompt("Ingrese el Tercer lado del triangulo"));
+
+    if(lado1 === lado2 && lado2 === lado3 && lado1 === lado3)
+        alert("Es un triangulo Equilatero");
+    
+    else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3)
+        alert("Es un triangulo Isoceles");
+        
+    else if (lado1 != lado2 && lado2 != lado3 && lado1 != lado3)
+        alert("Es un triangulo Escaleno");        
+}
+
+//Ejercicio 10
+
+function llantas()
+{
+    var llantas = parseFloat(prompt("Ingrese la cantidad de llantas que quiere comprar"));
+   
+    if(llantas <= 4)    
+        alert(`El total a pagar por las llantas es: $${llantas * 150.00}`);
+        
+    else if (llantas >= 5 && llantas <=10)
+        alert(`El total a pagar por las llantas es: $${llantas * 125.00}`);
+    
+    else if (llantas > 10)
+        alert(`El total a pagar por las llantas es: $${llantas * 100.00}`);
+}
+
+//Ejercicio 11
+
+function oficinas()
+{
+    var categoria = parseInt(prompt("Ingrese su categoria de trabajo"));
+    var horasExtra = parseInt(prompt("Ingrese la cantidad de horas extra"));
+    
+    if(categoria === 1 || categoria === 2 || categoria ===3)
+    {
+        if(categoria === 1)
+            alert(`El pago por las horas extras es: $${horasExtra * 40}`);
+
+         else if (categoria === 2)
+            alert(`El pago por las horas extras es: $${horasExtra * 50}`);
+
+        else
+            alert(`El pago por las horas extras es: $${horasExtra * 85}`);
+               
+    }else{
+        alert(`El pago por la horas extra es: Nada porque es mayor a categoria 3`);
+    }
+}
+
+//Ejercicio 12
+
+function paresImpares ()
+{   
+    var condicion = 0;
+    var pares = 0;
+    var impares = 0;
+
+    do{        
+        condicion = parseInt(prompt("Ingrese un número o cero para salir"));    
+        
+        if(condicion % 2 === 0)
+            pares+= condicion;
+        
+        else
+            impares+= condicion;    
+
+    }while(condicion != 0)
+    
+    alert(`La suma de los numeros pares es: ${pares}`);
+    alert(`La suma de los numeros impares es: ${impares}`);
+    
+}
+
+//Ejercicio 13
+
+function promedio ()
+{    
+    var nota = -1;
+    var suma = 0;
+    var contador = 0;
+    do{
+        nota = parseFloat(prompt("Ingrese la nota o -1 para detener"));
+
+        if(nota != -1)
+        {
+            suma += nota;
+            contador++;
+        }        
+
+    }while(nota != -1)
+
+    alert(`El promdio de las calificaciones es: ${ (suma / contador).toFixed(2) }`);
+
+}
+
+//Ejericio 14
+
+function mayorMenor()
+{
+    var notas = new Array(5);
+    var notaMayor = null;
+    var notaMenor = null;
+    
+    for(var i = 0; i<notas.length; i++)
+    {
+        notas[i] = parseFloat(prompt("Ingrese la nota"));
+
+        if(i === 0)
+        {
+            notaMayor = notas[i];
+            notaMenor = notas[i];
+        }            
+        
+        if(notas[i] > notaMayor)
+            notaMayor = notas[i];
+
+        if(notas[i] < notaMenor)
+            notaMenor = notas[i];
+
+    }
+
+    alert(`La calificacion Mayor es: ${notaMayor.toFixed(2)}`);
+    alert(`La calificacion Menor es: ${notaMenor.toFixed(2)}`);
+}
+
+//Ejercicio 15
+
+function examenes()
+{
+    var mejorar = 0;
+    var regular = 0;
+    var bueno = 0;
+    var muyBueno = 0;
+    var excelente = 0;
+    var nota = -1;
+    do{
+        nota = parseFloat(prompt("Ingrese la nota o -1 para salir"));
+
+        if(nota != -1)
+        {
+            
+        }
+
+
+    }while(nota!= -1)
+
+}
+
 
 
 app.initialize();
