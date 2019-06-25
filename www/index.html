@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <title>App movil</title>
+</head>
+
+<body>
+
+    <!-- Pagina 1 -->
+    <div data-role="page" id="pagina1">
+            <div data-role="header">
+                <h2>Mi primera App</h2>
+            </div>
+    
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="home">Temperatura</a></li>
+                    <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+                    <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+                    <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+                    <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+                    <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+                    <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+                    <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+                    <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+                    <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+                    <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+                    <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+                    <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+                    <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+                    <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+                    <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+                    <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+                    <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+                    <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+                    <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+                </ul>
+            </div>
+            <div data-role="content">
+                            
+                <button id="btnconvertir">Conversion</button>
+                
+            </div>
+    
+            <div data-role="footer" data-position="fixed">
+                <h3>Tutorial apache cordova</h3>
+            </div>
+    </div>
+    <!--Fin Pagina 1-->
+
+    <!-- Pagina 2 -->
+    <div data-role="page" id="pagina2">
+        <div data-role="header">
+            <h2>Mi primera App</h2>
+        </div>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+                <li><a href="#" data-icon="grid"> Sueldo </a></li>
+                <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+                <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+                <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+                <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+                <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+                <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+                <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+                <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+                <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+                <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+                <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+                <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+                <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+                <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+                <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+                <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+                <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+                <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+            </ul>
+        </div>
+        <div data-role="content">                    
+            <button id="btnconvertir2">Resultado</button>
+            
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h3>Tutorial apache cordova</h3>
+        </div>
+</div>
+<!--Fin Pagina 2-->
+
+<!-- Pagina 3 -->
+<div data-role="page" id="pagina3">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir3">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 3-->
+
+<!-- Pagina 4 -->
+<div data-role="page" id="pagina4">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir4">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 4-->
+
+<!-- Pagina 5 -->
+<div data-role="page" id="pagina5">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+        
+        <select name="Combo5" id="Combo5">
+            <option value="triangulo"> Triangulo </option>
+            <option value="circulo"> Circulo </option>
+            <option value="trapecio"> Trapecio </option>
+            <option value="rombo"> Rombo </option>
+        </select>
+                    
+        <button id="btnconvertir5">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 5-->
+
+<!-- Pagina 6 -->
+<div data-role="page" id="pagina6">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+
+            <select name="Combo6" id="Combo6">
+                    <option value="Suma"> Suma </option>
+                    <option value="Resta"> Resta </option>
+                    <option value="Multiplicacion"> Multiplicacion </option>
+                    <option value="Division"> Division </option>
+                    <option value="Modulo"> Modulo </option>
+                    <option value="Potencia"> Potencia </option>
+                    <option value="Raiz"> Raiz </option>
+                    <option value="Cubica"> Cubica </option>
+            </select>
+                    
+        <button id="btnconvertir6">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 6-->
+
+<!-- Pagina 7 -->
+<div data-role="page" id="pagina7">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir7">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 7-->
+
+<!-- Pagina 8 -->
+<div data-role="page" id="pagina8">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir8">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 8-->
+
+<!-- Pagina 9 -->
+<div data-role="page" id="pagina9">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir9">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 9-->
+
+<!-- Pagina 10 -->
+<div data-role="page" id="pagina10">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir10">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 10-->
+
+<!-- Pagina 11 -->
+<div data-role="page" id="pagina11">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir11">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 11-->
+
+<!-- Pagina 12 -->
+<div data-role="page" id="pagina12">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir12">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 12-->
+
+<!-- Pagina 13 -->
+<div data-role="page" id="pagina13">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir13">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 13-->
+
+<!-- Pagina 14 -->
+<div data-role="page" id="pagina14">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir14">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 14-->
+
+<!-- Pagina 15 -->
+<div data-role="page" id="pagina15">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir15">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 15-->
+
+<!-- Pagina 16 -->
+<div data-role="page" id="pagina16">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir16">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 16-->
+
+<!-- Pagina 17 -->
+<div data-role="page" id="pagina17">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir17">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 17-->
+
+<!-- Pagina 18 -->
+<div data-role="page" id="pagina18">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina19" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir18">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 18-->
+
+<!-- Pagina 19 -->
+<div data-role="page" id="pagina19">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#pagina20" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir19">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 19-->
+
+<!-- Pagina 20 -->
+<div data-role="page" id="pagina20">
+    <div data-role="header">
+        <h2>Mi primera App</h2>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#pagina1" data-icon="home">Temperatura</a></li>
+            <li><a href="#pagina2" data-icon="grid"> Sueldo </a></li>
+            <li><a href="#pagina3" data-icon="gear"> Nota Est. </a></li>
+            <li><a href="#pagina4" data-icon="check"> Software Company </a></li>
+            <li><a href="#pagina5" data-icon="star"> Areas </a></li>
+            <li><a href="#pagina6" data-icon="plus"> Calculadora </a></li>
+            <li><a href="#pagina7" data-icon="star"> Boleto </a></li>
+            <li><a href="#pagina8" data-icon="tag"> Incremento Salario </a></li>
+            <li><a href="#pagina9" data-icon="tag"> Triangulos </a></li>
+            <li><a href="#pagina10" data-icon="tag"> Llanteria </a></li>
+            <li><a href="#pagina11" data-icon="tag"> Oficinas </a></li>
+            <li><a href="#pagina12" data-icon="tag"> Pares e Impares </a></li>
+            <li><a href="#pagina13" data-icon="tag"> Promedio </a></li>
+            <li><a href="#pagina14" data-icon="tag"> Mayor y menor </a></li>
+            <li><a href="#pagina15" data-icon="tag"> Examenes </a></li>
+            <li><a href="#pagina16" data-icon="tag"> Frecuencia </a></li>
+            <li><a href="#pagina17" data-icon="tag"> Array 10 elementos </a></li>
+            <li><a href="#pagina18" data-icon="tag"> Array 10 estudiantes </a></li>
+            <li><a href="#pagina19" data-icon="tag"> La Vaca Lola </a></li>
+            <li><a href="#" data-icon="tag"> English for us </a></li>
+        </ul>
+    </div>
+    <div data-role="content">
+                    
+        <button id="btnconvertir20">Conversion</button>
+        
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h3>Tutorial apache cordova</h3>
+    </div>
+</div>
+<!--Fin Pagina 20-->
+    
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+</body>
+
+</html>
