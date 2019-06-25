@@ -26,7 +26,8 @@ var app = {
         document.getElementById("btnconvertir4").addEventListener('click', softwareCompany, false);
         document.getElementById("btnconvertir5").addEventListener('click', areas, false);
         document.getElementById("btnconvertir6").addEventListener('click', calculadora, false);
-
+        document.getElementById("btnconvertir7").addEventListener('click', boletos, false);
+        document.getElementById("btnconvertir8").addEventListener('click', incrementoSalario, false);
     },
 
     // deviceready Event Handler
@@ -167,6 +168,10 @@ function areas()
 
         break;
 
+        default:
+            alert("Selecione un opcion valida");
+        break;
+
     }
 }
 
@@ -228,7 +233,54 @@ function calculadora()
             alert(`El resultado de la ${opcion} es ${Math.sqrt(numero)}`);
         break;
 
+        default:
+            alert("Selecione un opcion valida");
+        break;
     }
 }
+
+//Ejercicio 7
+
+function boletos()
+{
+    var kilometros = parseFloat(prompt("Ingrese la distancia en Km"));
+    var dias = parseFloat(prompt("Ingrese el tiempo de días"));
+
+    var precio = kilometros * 0.15;
+
+    if(dias > 10 && kilometros > 300)
+    {
+        var descuento = precio * 0.30;
+        precio -= descuento;
+    }
+
+    alert(`El precio a pagar por el boleto es: ${precio.toFixed(2)}`);
+
+}
+
+//Ejercicio 8
+function incrementoSalario()
+{
+    var salario = parseFloat(prompt("Ingrese su salario"));
+    var incremento = 0;
+    if(salario < 300)
+    {
+        incremento = salario * 0.12;
+        salario += incremento;   
+    }else if(salario >= 300 && salario <= 500){
+        incremento = salario * 0.08;
+        salario += incremento;
+    }else if (salario > 500 && salario <= 800){
+        incremento = salario * 0.07;
+        salario += incremento;
+    }else if(salario > 800){
+        incremento = salario * 0.06;
+        salario += incremento;
+    }
+
+    alert(`El nuevo salario del empleado es: ${salario.toFixed(2)}`);
+
+}
+
 
 app.initialize();
