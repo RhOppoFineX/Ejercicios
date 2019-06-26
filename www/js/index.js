@@ -35,7 +35,11 @@ var app = {
         document.getElementById("btnconvertir13").addEventListener('click', promedio, false);
         document.getElementById("btnconvertir14").addEventListener('click', mayorMenor, false);
         document.getElementById("btnconvertir15").addEventListener('click', examenes, false);
-
+        document.getElementById("btnconvertir16").addEventListener('click', frecuencia, false);
+        document.getElementById("btnconvertir17").addEventListener('click', diezElementos, false);
+        document.getElementById("btnconvertir18").addEventListener('click', diezEstudiantes, false);
+        document.getElementById("btnconvertir19").addEventListener('click', vacaNegra, false);
+        document.getElementById("btnconvertir20").addEventListener('click', englishForAll, false);
 
     },
 
@@ -438,13 +442,198 @@ function examenes()
 
         if(nota != -1)
         {
+            if(nota <= 3.99)
+                mejorar++;
             
+            else if(nota >= 4.00 && nota <= 5.99)
+                regular++;
+                
+            else if (nota >= 6.00 && nota <= 7.99)
+                bueno++;
+
+            else if (nota >= 8.00 && nota <= 8.99)
+                muyBueno++;
+
+            else if(nota >= 9.00 && nota <= 10.00)
+                excelente++;          
         }
-
-
     }while(nota!= -1)
+    
+    alert(`${mejorar} estudiantes tivieron un nota entre menor a 3.99`);
+    alert(`${regular} estudiantes tivieron un nota entre mayor o igual 4.00 y menor o igual a 5.99`);
+    alert(`${bueno} estudiantes tivieron un nota entre mayor o igual a 6.00 y menor o igual a 7.99`);
+    alert(`${muyBueno} estudiantes tivieron un nota entre mayor o igual 8.00 y menor o igual a 8.99`);
+    alert(`${excelente} estudiantes tivieron un nota entre mayor o igual a 9.00 y menor o igual a 10.00`);
 
 }
+
+//Ejercicio 16
+function frecuencia()
+{
+    var arreglo = [];
+    var notas = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+    
+    var nota = -1;
+    var cont = 0;
+    do{
+        nota = parseFloat(prompt("Ingrese la nota o -1 para salir"));
+
+        if(nota != -1)
+        {            
+            arreglo[cont] = nota;
+            cont++;
+        }
+
+    }while(nota != -1)
+
+    for(var i = 0; i < arreglo.length; i++)
+    {
+                                               
+    }    
+
+}
+
+//Ejercicio 17
+
+function diezElementos()
+{
+    var arreglo = new Array(10);
+    var numero = null;
+    var pares = 0;
+    var impares = 0;
+    var nulos = 0;
+
+    for(var i = 0; i < arreglo.length; i++)
+    {
+        numero = parseInt(prompt("Ingrese un número enetero"));
+        
+        if(numero % 2 === 0)
+            pares ++;
+        
+        else if (numero === 0)
+            nulos++;
+            
+        else
+            impares++;   
+
+    }
+
+    alert(`La cantidad de número pares es: ${pares}`);
+    alert(`La cantidad de número impares es: ${impares}`);
+    alert(`La cantidad de número nulos es: ${nulos}`);
+
+}
+
+//Ejercicio 18
+
+function diezEstudiantes()
+{
+    var arreglo = new Array(10);
+    var nota = null;
+    var suma = 0;
+    var resio = 0;
+
+    for(var i = 0; i < arreglo.length; i++)
+    {
+        nota = parseFloat(prompt("Ingrese la nota"));
+        suma += nota;
+
+        if(nota >= 6.00)
+            resio++;        
+        
+    }
+    
+    var porcentaje = (resio * 100) / arreglo.length;
+
+    alert(`El número de estudiantes aprobados es: ${resio}`);
+    alert(`El porcentaje de alumnos aprobados es: ${porcentaje.toFixed(2)}%`);
+    alert(`El promedio general del grupo es: ${(suma / arreglo.length).toFixed(2)}`);
+
+}
+
+//Ejercicio 19
+
+function vacaNegra()
+{
+    var ventas = new Array(9);   
+    var montoTotal = 0;
+    var trimestre1 = 0;
+    var trimestre2 = 0;
+    var trimestre3 = 0;
+
+    
+    for(var i = 0; i < ventas.length; i++)
+    {
+        if(i <= 3)        
+            ventas[i] = parseFloat(prompt("Ingrese la venta leche"));        
+                    
+        else if(i > 3 && i <= 6)
+            ventas[i] = parseFloat(prompt("Ingrese la venta crema"));        
+        else
+            ventas[i] = parseFloat(prompt("Ingrese la venta queso")); 
+            
+        montoTotal += ventas[i];    
+    }
+    
+    trimestre1 = ventas[0] + ventas[3] + ventas[6];
+    trimestre2 = ventas[1] + ventas[4] + ventas[7];
+    trimestre3 = ventas[2] + ventas[5] + ventas[8];
+    
+    alert(`Monto Total por todas las ventas: ${montoTotal}`);
+    alert(`Ventas en el trimestre 1: ${trimestre1}`);
+    alert(`Ventas en el trimestre 2: ${trimestre2}`);
+    alert(`Ventas en el trimestre 3: ${trimestre3}`);
+
+}
+
+//Ejercicio 20
+
+function englishForAll()
+{    
+    var nota = null;
+    var menor = 100;
+    var mayor1 = 0;
+    var array = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+    ];
+
+    var mayor2 = 0;
+    var mayor3 = 0;
+
+
+    for(var i = 0; i < array.length; i++)
+    {
+        for(var j = 0 ; j < 3; j++)
+        {
+            array[i][j] = parseFloat(prompt(`Ingrese la nota del examen ${j+1} al estudiante ${i+1}`));
+
+            if(array[i][j] < menor)
+                menor = array[i][j];
+
+            if(array[i][j] > mayor1 && j === 0)
+                mayor1 = array[i][j];
+            
+            if(array[i][j] > mayor2 && j === 1)
+                mayor2 = array[i][j];
+
+            if(array[i][j] > mayor3 && j === 2)
+                mayor3 = array[i][j];
+
+        }
+    }
+
+    alert(`La menor calificaión es: ${menor}`);
+    alert(`La calificaión mayor del primer examen es: ${mayor1}`);
+    alert(`La calificaión mayor del segundo examen es: ${mayor2}`);
+    alert(`La calificaión mayor del tercer examen es: ${mayor3}`);        
+    
+}
+
 
 
 
